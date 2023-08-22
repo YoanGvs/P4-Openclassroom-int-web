@@ -1,3 +1,182 @@
+* {
+  box-shadow: 0 0 0 1px red inset;
+}
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.header__logo {
+  padding: 19px 89px 19px 89px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.header__location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  height: 50px;
+  margin-top: -5px;
+  background-color: #eaeaea;
+}
+
+.hero {
+  text-align: center;
+  background-color: #f6f6f6;
+}
+.hero__headline {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 30px;
+}
+.hero__subtitle {
+  padding: 5px 20px 40px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  color: #353535;
+}
+.hero button {
+  margin: 0;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  background: linear-gradient(178deg, rgb(255, 121, 218) -11.44%, rgb(147, 86, 220) 123.93%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  padding: 0 25px 0 25px;
+  margin-bottom: 81px;
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+}
+.fonctionnement__title {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 30px 0 0 20px;
+}
+
+.step {
+  display: flex;
+  margin: 30px;
+  align-items: center;
+  width: 323px;
+  height: 72px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  gap: 22px;
+}
+.step__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  background-color: rgb(147, 86, 220);
+  border-radius: 50%;
+  color: white;
+  font-size: 14px;
+  position: relative;
+  left: -10px;
+}
+.step__text {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+a, a:visited, a:active, a:focus {
+  color: black;
+  text-decoration: none;
+}
 
 /*# sourceMappingURL=style.css.map */
