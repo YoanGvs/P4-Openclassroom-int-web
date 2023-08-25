@@ -10,7 +10,6 @@ body {
   padding: 19px 89px 19px 89px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
-
 .header__location {
   display: flex;
   justify-content: center;
@@ -59,16 +58,15 @@ body {
 .fonctionnement {
   display: flex;
   flex-direction: column;
+  padding: 20px;
 }
 .fonctionnement__title {
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin: 30px 0 0 20px;
 }
-
-.step {
+.fonctionnement__step__block {
   display: flex;
   margin: 30px;
   align-items: center;
@@ -78,7 +76,7 @@ body {
   border-radius: 20px;
   gap: 22px;
 }
-.step__number {
+.fonctionnement__step__block__number {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,11 +89,30 @@ body {
   position: relative;
   left: -10px;
 }
-.step__text {
+.fonctionnement__step__block__text {
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+}
+
+.restaurants {
+  background-color: #f6f6f6;
+  padding: 16px;
+}
+.restaurants__title {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+.restaurants__card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
 }
 
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
