@@ -55,28 +55,28 @@ body {
   margin-bottom: 81px;
 }
 
-.fonctionnement {
+.process {
   display: flex;
   flex-direction: column;
   padding: 20px;
 }
-.fonctionnement__title {
+.process__title {
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
-.fonctionnement__step__block {
+.process__step__block {
   display: flex;
-  margin: 30px;
   align-items: center;
   width: 323px;
   height: 72px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   gap: 22px;
+  margin-top: 20px;
 }
-.fonctionnement__step__block__number {
+.process__step__block__number {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,7 +89,10 @@ body {
   position: relative;
   left: -10px;
 }
-.fonctionnement__step__block__text {
+.process__step__block__fa__purple {
+  color: #8541d8;
+}
+.process__step__block__text {
   font-size: 16px;
   font-style: normal;
   font-weight: 500;

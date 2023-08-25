@@ -25,8 +25,6 @@ body {
     }
 }
 
-
-
 .hero {
     text-align: center;
     background-color: $color-grey-light;
@@ -62,56 +60,58 @@ body {
 
 }
 
-
-.fonctionnement{
+.process{
     display: flex;
     flex-direction: column;
     padding: 20px;
 
     &__title{
         @include title;
+        
     }
 
     &__step{
-        
 
         &__block{
-            display:flex;
-            margin: 30px;
+            display: flex;
             align-items: center;
             width: 323px;
             height: 72px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
             border-radius: 20px;
             gap: 22px;
+            margin-top: 20px;
+
 
             &__number{
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 24px;
-                height: 24px;
-                background-color: $color-main;
-                border-radius: 50%;
-                color: $color-contrast;
-                font-size: 14px;
-                position: relative;
-                left: -10px;
+                 justify-content: center;
+                 align-items: center;
+                 width: 24px;
+                 height: 24px;
+                 background-color: $color-main;
+                 border-radius: 50%;
+                 color: $color-contrast;
+                 font-size: 14px;
+                 position: relative;
+                 left: -10px;
             }
 
             &__fa{
 
+                &__purple{
+                    color: $color-main-d;
+                }
             }
-            
+
             &__text{
                 font-size: 16px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: normal;
+                 font-style: normal;
+                 font-weight: 500;
+                 line-height: normal;
             }
         }
     }
-
 }
 
 
