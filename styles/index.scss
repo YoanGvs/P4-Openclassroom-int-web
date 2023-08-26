@@ -2,9 +2,9 @@
 @import "mixin";
 
 
-* {
-    box-shadow: 0 0 0 1px red inset;
-}
+// * {
+//     box-shadow: 0 0 0 1px red inset;
+// }
 body {
     font-family: $font-main;
 }
@@ -63,7 +63,7 @@ body {
 .process{
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 30px;
 
     &__title{
         @include title;
@@ -186,4 +186,40 @@ body {
 
 .restaurant__card__content__like{
     font-size: 30px;
+}
+
+
+.footer{
+    background-color: $color-grey-dark;
+    color: $color-contrast;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 40px;
+
+    &__logo{
+        font-size: 18px;
+        font-weight: 400;
+        font-family: "Shrikhand", cursive;
+    }
+
+    &__nav{
+        
+        &__link{
+            display: flex;
+            gap: 15px;
+            margin-bottom: 7px;
+
+            &__icon{
+                color: $color-contrast;
+            }
+
+            &__text{
+                color: $color-contrast;
+            }
+            
+        }
+        
+    }
 }

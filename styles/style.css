@@ -79,10 +79,6 @@ a, a:visited, a:active, a:focus {
   text-decoration: none;
 }
 
-* {
-  box-shadow: 0 0 0 1px red inset;
-}
-
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -139,7 +135,7 @@ body {
 .process {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 30px;
 }
 .process__title {
   font-size: 24px;
@@ -244,6 +240,32 @@ body {
 
 .restaurant__card__content__like {
   font-size: 30px;
+}
+
+.footer {
+  background-color: #353535;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 40px;
+}
+.footer__logo {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Shrikhand", cursive;
+}
+.footer__nav__link {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 7px;
+}
+.footer__nav__link__icon {
+  color: white;
+}
+.footer__nav__link__text {
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
