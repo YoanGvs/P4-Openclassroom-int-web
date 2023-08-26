@@ -1,3 +1,84 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+a, a:visited, a:active, a:focus {
+  color: black;
+  text-decoration: none;
+}
+
 * {
   box-shadow: 0 0 0 1px red inset;
 }
@@ -116,87 +197,53 @@ body {
   margin-bottom: 18px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 15px;
+  position: relative;
+}
+.restaurants__card__img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 60%;
+}
+.restaurants__card__new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aquamarine;
+  color: #008766;
+  width: 80px;
+  height: 29px;
+  background-color: #99e2d0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 1;
+  font-size: 14px;
+}
+.restaurants__card__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.restaurants__card__content__description {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.restaurants__card__content__description__title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
 }
 
-/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
-html,
-body,
-p,
-ol,
-ul,
-li,
-dl,
-dt,
-dd,
-blockquote,
-figure,
-fieldset,
-legend,
-textarea,
-pre,
-iframe,
-hr,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  padding: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: 100%;
-  font-weight: normal;
-}
-
-ul {
-  list-style: none;
-}
-
-button,
-input,
-select {
-  margin: 0;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-
-img,
-video {
-  height: auto;
-  max-width: 100%;
-}
-
-iframe {
-  border: 0;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-td,
-th {
-  padding: 0;
-}
-
-a, a:visited, a:active, a:focus {
-  color: black;
-  text-decoration: none;
+.restaurant__card__content__like {
+  font-size: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */
