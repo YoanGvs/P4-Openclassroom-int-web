@@ -52,10 +52,19 @@ body {
         color: white;
         font-size: 16px;
         font-weight: 500;
-        background: linear-gradient(178deg, $color-secondary -11.44%, $color-main 123.93%);
+        background:  var(--button-gradient, linear-gradient(175deg, #9356DC 0%, #FF79DA 100%));
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
         padding: 0 25px 0 25px;
         margin-bottom: 81px;
+        transition: transform 400ms, background-color 300ms;
+        
+        &:hover{
+            transform: scale(1.15);
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(182deg, #9356DC 0%, #FF79DA 100%);
+
+        }
+        
+        
     }
 
 }
@@ -186,6 +195,7 @@ body {
 
 .restaurant__card__content__like{
     font-size: 30px;
+    
 }
 
 
