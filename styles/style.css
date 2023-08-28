@@ -264,7 +264,10 @@ body {
 }
 .twitter-like .full-heart {
   opacity: 0;
-  color: #9356DC;
+  background: linear-gradient(182deg, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 @keyframes likeAnimation {
