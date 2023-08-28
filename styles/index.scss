@@ -59,9 +59,9 @@ body {
         transition: transform 400ms, background-color 300ms;
         
         &:hover{
-            transform: scale(1.15);
+            transform: scale(1);
             background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(182deg, #9356DC 0%, #FF79DA 100%);
-
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
         }
         
         
@@ -170,8 +170,7 @@ body {
 
         &__content{
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            justify-content: space-around;
             padding: 10px;
 
 
@@ -192,11 +191,48 @@ body {
     }
 }
 
+.hidden-checkbox {
+    display: none;
+  
+    // Quand la case est cochée
+    &:checked + label .empty-heart {
+      opacity: 0;
+    }
+    &:checked + label .full-heart {
+      opacity: 1;
+    }
+  }
 
-.restaurant__card__content__like{
-    font-size: 30px;
-    
+.twitter-like {
+  position: relative;
+  cursor: pointer;
+  font-size: 2em;
+
+  .empty-heart, .full-heart {
+    position: absolute;
+    transition: opacity 0.3s ease;
+  }
+
+  .full-heart {
+    opacity: 0;
+    color: #9356DC
+  }
 }
+
+
+// Animation
+@keyframes likeAnimation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.3);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
 
 
 .footer{
