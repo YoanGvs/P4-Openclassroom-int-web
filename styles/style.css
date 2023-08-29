@@ -79,13 +79,22 @@ a, a:visited, a:active, a:focus {
   text-decoration: none;
 }
 
+* {
+  box-shadow: 0 0 0 1px red inset;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .header__logo {
   padding: 19px 89px 19px 89px;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  max-width: 300px;
 }
 .header__location {
   display: flex;
@@ -94,6 +103,7 @@ body {
   gap: 17px;
   height: 50px;
   margin-top: -5px;
+  width: 100%;
   background-color: #eaeaea;
 }
 
@@ -149,22 +159,32 @@ body {
   font-weight: 700;
   line-height: normal;
 }
+.process__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 769px) {
+  .process__step {
+    flex-direction: row;
+  }
+}
 .process__step__block {
   display: flex;
   align-items: center;
-  width: 323px;
+  width: 80%;
   height: 72px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   gap: 22px;
-  margin-top: 20px;
+  margin: 20px;
 }
 .process__step__block__number {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 24px;
-  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
   background-color: rgb(147, 86, 220);
   border-radius: 50%;
   color: white;
@@ -185,6 +205,16 @@ body {
 .restaurants {
   background-color: #f6f6f6;
   padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 769px) {
+  .restaurants {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
 }
 .restaurants__title {
   font-size: 24px;
@@ -193,13 +223,26 @@ body {
   line-height: normal;
   margin-bottom: 20px;
 }
+@media (min-width: 769px) {
+  .restaurants__title {
+    flex: 0 0 100%;
+  }
+}
 .restaurants__card {
   display: flex;
   flex-direction: column;
+  min-width: 300px;
   margin-bottom: 18px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 15px;
   position: relative;
+}
+@media (min-width: 769px) {
+  .restaurants__card {
+    max-width: calc(50% - 20px);
+    margin: 10px;
+    min-width: 45%;
+  }
 }
 .restaurants__card__img {
   border-top-left-radius: 15px;
@@ -275,7 +318,7 @@ body {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.3);
+    transform: scale(1.2);
   }
   100% {
     transform: scale(1);
