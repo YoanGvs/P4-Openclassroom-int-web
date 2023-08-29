@@ -126,7 +126,7 @@ body {
 
             &__fa{
 
-                &__purple{
+                &--purple{
                     color: $color-main-d;
                 }
             }
@@ -284,6 +284,17 @@ body {
     gap: 15px;
     margin-top: 40px;
 
+
+    // Pour les écrans supérieurs à 768px
+    @media (min-width: 769px) {
+        flex-direction: row-reverse;  // Inverse l'ordre des éléments
+        justify-content: flex-start;  // Aligne les éléments à la fin (à droite)
+        align-items: end;
+        padding-bottom: 10px;
+        min-height: 114px;
+        margin-top: 0px;
+    }
+
     &__logo{
         font-size: 18px;
         font-weight: 400;
@@ -291,11 +302,21 @@ body {
     }
 
     &__nav{
-        
+        @media (min-width: 768px) {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: end;
+            gap: 20px;
+        }
         &__link{
             display: flex;
             gap: 15px;
             margin-bottom: 7px;
+
+            @media (min-width: 768px) {
+                
+            }
 
             &__icon{
                 color: $color-contrast;

@@ -192,7 +192,7 @@ body {
   position: relative;
   left: -10px;
 }
-.process__step__block__fa__purple {
+.process__step__block__fa--purple {
   color: #8541d8;
 }
 .process__step__block__text {
@@ -333,10 +333,29 @@ body {
   gap: 15px;
   margin-top: 40px;
 }
+@media (min-width: 769px) {
+  .footer {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: end;
+    padding-bottom: 10px;
+    min-height: 114px;
+    margin-top: 0px;
+  }
+}
 .footer__logo {
   font-size: 18px;
   font-weight: 400;
   font-family: "Shrikhand", cursive;
+}
+@media (min-width: 768px) {
+  .footer__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: end;
+    gap: 20px;
+  }
 }
 .footer__nav__link {
   display: flex;
