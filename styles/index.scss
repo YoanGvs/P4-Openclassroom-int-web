@@ -2,17 +2,25 @@
 @import "mixin";
 
 
-// * {
-//     box-shadow: 0 0 0 1px red inset;
-// }
+ * {
+     box-shadow: 0 0 0 1px red inset;
+ }
 body {
     font-family: $font-main;
 }
 
 .header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+
+
     &__logo{
         padding: 19px 89px 19px 89px;
-        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+        max-width: 300px;
+    
     }
     &__location {
         display: flex;
@@ -21,6 +29,7 @@ body {
         gap: 17px;
         height: 50px;
         margin-top: -5px;
+        width: 100%;
         background-color: $color-grey-middle;
     }
 }
@@ -80,24 +89,33 @@ body {
     }
 
     &__step{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media (min-width: 769px){
+            flex-direction: row;
+            
+
+        }
 
         &__block{
             display: flex;
             align-items: center;
-            width: 323px;
+            width: 80%;
             height: 72px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
             border-radius: 20px;
             gap: 22px;
-            margin-top: 20px;
+            margin: 20px;
 
 
             &__number{
                 display: flex;
                  justify-content: center;
                  align-items: center;
-                 width: 24px;
-                 height: 24px;
+                 min-width: 24px;
+                 min-height: 24px;
                  background-color: $color-main;
                  border-radius: 50%;
                  color: $color-contrast;
@@ -108,16 +126,16 @@ body {
 
             &__fa{
 
-                &__purple{
+                &--purple{
                     color: $color-main-d;
                 }
             }
 
             &__text{
                 font-size: 16px;
-                 font-style: normal;
-                 font-weight: 500;
-                 line-height: normal;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
             }
         }
     }
@@ -126,19 +144,38 @@ body {
 .restaurants {
     background-color: $color-grey-light;
     padding: 16px;
+    display:flex;
+    flex-direction: column;
+    @media (min-width: 769px) {
+        flex-direction: row;
+        flex-wrap: wrap;  // Permet aux cartes de passer à la ligne suivante
+        justify-content: center;
+        gap:20px
+    }
 
     &__title{
         @include title;
-        margin-bottom: 20px;       
+        margin-bottom: 20px;
+        // Pour les écrans supérieurs à 768px
+    @media (min-width: 769px) {
+        flex: 0 0 100%;  // Prend toute la largeur, donc reste sur sa propre ligne
+      }       
     }
 
     &__card{
         display: flex;
         flex-direction: column;
+        min-width: 300px;
         margin-bottom: 18px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
         border-radius: 15px;
         position: relative;
+
+        @media (min-width: 769px) {
+            max-width: calc(50% - 20px);  // Maximum de 2 cartes par ligne
+            margin: 10px;  // Ajoute un peu d'espacement autour des cartes
+            min-width: 45%;
+        }
 
         &__img{
             border-top-left-radius: 15px;
@@ -229,7 +266,7 @@ body {
       transform: scale(1);
     }
     50% {
-      transform: scale(1.3);
+      transform: scale(1.2);
     }
     100% {
       transform: scale(1);
@@ -247,6 +284,17 @@ body {
     gap: 15px;
     margin-top: 40px;
 
+
+    // Pour les écrans supérieurs à 768px
+    @media (min-width: 769px) {
+        flex-direction: row-reverse;  // Inverse l'ordre des éléments
+        justify-content: flex-start;  // Aligne les éléments à la fin (à droite)
+        align-items: end;
+        padding-bottom: 10px;
+        min-height: 114px;
+        margin-top: 0px;
+    }
+
     &__logo{
         font-size: 18px;
         font-weight: 400;
@@ -254,11 +302,21 @@ body {
     }
 
     &__nav{
-        
+        @media (min-width: 768px) {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: end;
+            gap: 20px;
+        }
         &__link{
             display: flex;
             gap: 15px;
             margin-bottom: 7px;
+
+            @media (min-width: 768px) {
+                
+            }
 
             &__icon{
                 color: $color-contrast;
