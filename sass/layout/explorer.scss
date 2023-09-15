@@ -1,11 +1,13 @@
 @use "../utils/mixins";
 @use "../utils/colors";
+
 .explorer {
   text-align: center;
-  margin: 2rem;
+  padding: 3rem 0 3rem 0;
+  background-color: #f6f6f6;
   & h2 {
     font-size: 1.5rem;
-    margin: 1rem;
+    margin-bottom: 1rem;
   }
   & p {
     font-size: 1rem;

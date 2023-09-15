@@ -11,11 +11,11 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-main {
-  padding: 0 7rem;
+section {
+  padding: 0 11.5rem;
 }
-@media (max-width: 1000px) {
-  main {
+@media (max-width: 1024px) {
+  section {
     padding: 0 1rem;
   }
 }
@@ -63,11 +63,12 @@ header {
 
 .explorer {
   text-align: center;
-  margin: 2rem;
+  padding: 3rem 0 3rem 0;
+  background-color: #f6f6f6;
 }
 .explorer h2 {
   font-size: 1.5rem;
-  margin: 1rem;
+  margin-bottom: 1rem;
 }
 .explorer p {
   font-size: 1rem;
@@ -126,13 +127,13 @@ header {
 }
 .tuto {
   counter-reset: steps;
-  margin-bottom: 2rem;
+  margin: 3rem 0 3rem 0;
 }
 .tuto ol {
   display: flex;
   gap: 2rem;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   .tuto ol {
     flex-direction: column;
   }
@@ -178,14 +179,17 @@ header {
 
 #homepage .menus {
   background-color: #f6f6f6;
-  margin-bottom: 2rem;
+  padding: 3rem 11.5rem;
+}
+#homepage .menus h2 {
+  margin-bottom: 1rem;
 }
 #homepage .menus .menus__cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   #homepage .menus .menus__cards {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -224,6 +228,7 @@ header {
   background-image: url("../assets/menu-4.jpg");
 }
 #homepage .menus .card__description {
+  padding: 1rem;
   position: relative;
   background-color: white;
   border-radius: 0 0 1rem 1rem;
@@ -283,13 +288,32 @@ footer {
   padding: 1rem 2rem;
   color: white;
 }
+@media (min-width: 1024px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 11em;
+  }
+}
 footer h2 {
   font-family: "Shrikhand", "sans-serif";
   font-weight: 500;
   padding: 1rem 0;
 }
+@media (min-width: 1024px) {
+  footer h2 {
+    padding: 0 0 0 1rem;
+  }
+}
 footer p {
   padding: 0.2rem;
+}
+@media (min-width: 1024px) {
+  footer p {
+    padding-left: 1rem;
+  }
 }
 
 @keyframes appear {
@@ -304,6 +328,11 @@ footer p {
 }
 body {
   background-color: #f6f6f6;
+}
+@media (min-width: 1024px) {
+  body {
+    background-color: white;
+  }
 }
 
 #page-resto header:hover::before {
@@ -328,23 +357,42 @@ body {
 #page-resto .banner img {
   display: block;
   width: 100%;
-  height: 70vh;
+  height: 30vh;
   object-fit: cover;
   object-position: center;
 }
 #page-resto .resto__title {
-  margin-top: -2rem;
+  margin: -2rem 0;
+  position: relative;
+  border-radius: 2rem 2rem 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f6f6f6;
+}
+@media (min-width: 1024px) {
+  #page-resto .resto__title {
+    text-align: center;
+    margin: -2rem 3rem 0 3rem;
+  }
 }
 #page-resto .resto__title h2 {
   font-family: "Shrikhand", "cursive";
-  padding: 2rem 1rem;
+  padding-right: 1rem;
+}
+@media (min-width: 1024px) {
+  #page-resto .resto__title h2 {
+    padding: 2rem;
+    text-align: center;
+  }
+}
+#page-resto .resto__title .heart__animated {
   position: relative;
   background-color: white;
   border-radius: 0 0 1rem 1rem;
-  border-radius: 2rem 2rem 0 0;
-  background-color: #f6f6f6;
+  margin-left: 3rem;
 }
-#page-resto .resto__title h2::before {
+#page-resto .resto__title .heart__animated::before {
   display: inline-block;
   position: absolute;
   font-style: normal;
@@ -364,7 +412,7 @@ body {
   opacity: 1;
   transition: all 200ms ease-in-out;
 }
-#page-resto .resto__title h2::after {
+#page-resto .resto__title .heart__animated::after {
   display: inline-block;
   position: absolute;
   font-style: normal;
@@ -385,22 +433,23 @@ body {
   transition: all 200ms ease-in-out;
   background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
 }
-#page-resto .resto__title h2:hover::after {
+#page-resto .resto__title .heart__animated:hover::after {
   opacity: 1;
   transform: translateY(-50%) scale(1.1);
 }
 #page-resto .resto-main {
   padding: 0 1rem;
 }
-#page-resto .menus {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-}
-@media (max-width: 1000px) {
-  #page-resto .menus {
-    grid-template-columns: 1fr;
+@media (min-width: 1024px) {
+  #page-resto .resto-main {
+    margin: 0 3rem 0 3rem;
+    background-color: #f6f6f6;
   }
+}
+#page-resto .menus {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
 }
 #page-resto .menus h3 {
   text-transform: uppercase;
@@ -419,6 +468,7 @@ body {
 }
 #page-resto .menus .menus__category {
   overflow: hidden;
+  margin-bottom: 3rem;
 }
 #page-resto .menus .menus__category .menu-item {
   display: flex;
@@ -492,12 +542,12 @@ body {
     transform: rotate(0);
   }
 }
-#page-resto section.order {
-  height: 30vh;
+#page-resto .order {
+  height: 20vh;
   display: grid;
   place-items: center;
 }
-#page-resto section.order button {
+#page-resto .order button {
   color: white;
   font-weight: 300;
   font-size: 1.5rem;
@@ -510,7 +560,7 @@ body {
   box-shadow: 2px 1px 8px -3px #7e7e7e;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
 }
-#page-resto section.order button:hover {
+#page-resto .order button:hover {
   transform: scale(1.02);
   opacity: 0.9;
 }
