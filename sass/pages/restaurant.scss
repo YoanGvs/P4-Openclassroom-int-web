@@ -39,7 +39,7 @@ body {
   }
 
   .resto__title {
-    margin-top: -2rem;
+    margin: -2rem -1rem;
     h2 {
       font-family: "Shrikhand", "cursive";
       padding: 2rem 1rem;
@@ -47,13 +47,16 @@ body {
       border-radius: 2rem 2rem 0 0;
       background-color: colors.$lightergrey;
     }
+    @media (min-width : 1024px) {
+      text-align: center;
+    }
   }
 
   .resto-main {
     padding: 0 1rem;
     @media (min-width: 1024px) {
-      padding: 0 12rem;
-      min-width: 1055px;
+      margin: 0 10rem;
+
       background-color: colors.$lightergrey;
     }
   }
@@ -148,12 +151,23 @@ body {
     }
   }
 
-  section.order {
+  .order {
     height: 15vh;
     display: grid;
     place-items: center;
     button {
       @include mixins.base-button;
     }
+  }
+}
+
+@media (min-width: 1025px) {
+  .resto__title h2::before {
+    left: calc(30% + 5rem);  
+    transform: translateX(-30%);
+  }
+  .resto__title h2::after {
+    left: calc(30% + 5rem);    
+    transform: translateX(-30%);
   }
 }
