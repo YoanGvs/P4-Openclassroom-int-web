@@ -2,9 +2,13 @@
 @use "../utils/variables";
 @use "../utils/colors";
 @use "../utils/animations";
+@use "../layout/footer.scss";
 
 body {
   background-color: colors.$lightergrey;
+  @media (min-width: 1024px) {
+    background-color: white;
+  }
 }
 
 #page-resto {
@@ -29,6 +33,9 @@ body {
     height: 16vh;
     object-fit: cover;
     object-position: center;
+    @media (min-width : 1024px) {
+      height: 30vh;
+    }
   }
 
   .resto__title {
@@ -44,14 +51,17 @@ body {
 
   .resto-main {
     padding: 0 1rem;
+    @media (min-width: 1024px) {
+      padding: 0 12rem;
+      min-width: 1055px;
+      background-color: colors.$lightergrey;
+    }
   }
   .menus {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     gap: 1rem;
-    @media (max-width: variables.$breakpoint) {
-      grid-template-columns: 1fr;
-    }
+    flex-direction: column;
+
     h3 {
       text-transform: uppercase;
       font-weight: 400;
@@ -139,7 +149,7 @@ body {
   }
 
   section.order {
-    height: 30vh;
+    height: 15vh;
     display: grid;
     place-items: center;
     button {
