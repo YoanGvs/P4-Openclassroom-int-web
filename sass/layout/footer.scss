@@ -1,7 +1,7 @@
-@use "./../utils/colors";
+@import "./../utils/colors";
 
 footer {
-  background-color: colors.$darkgrey;
+  background-color: $darkgrey;
   padding: 1rem 2rem;
   color: white;
 

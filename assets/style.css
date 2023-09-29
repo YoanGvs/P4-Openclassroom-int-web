@@ -1,41 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
-*,
-::before,
-::after {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-}
-
-main {
-  padding: 0 7rem;
-}
-@media (max-width: 1000px) {
-  main {
-    padding: 0 2rem;
-  }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
@@ -63,7 +27,8 @@ header {
 
 .explorer {
   text-align: center;
-  margin: 2rem;
+  padding: 2rem;
+  background: #f6f6f6;
 }
 .explorer h2 {
   font-size: 1.5rem;
@@ -71,6 +36,7 @@ header {
 }
 .explorer p {
   font-size: 1rem;
+  margin-bottom: 3rem;
 }
 .explorer button {
   color: white;
@@ -126,13 +92,18 @@ header {
 }
 .tuto {
   counter-reset: steps;
-  margin-bottom: 2rem;
+  padding: 1rem;
+}
+@media (min-width: 1024px) {
+  .tuto {
+    padding: 3rem;
+  }
 }
 .tuto ol {
   display: flex;
   gap: 2rem;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   .tuto ol {
     flex-direction: column;
   }
@@ -178,7 +149,15 @@ header {
 
 #homepage .menus {
   background-color: #f6f6f6;
-  margin-bottom: 2rem;
+  padding: 1rem;
+}
+@media (min-width: 1024px) {
+  #homepage .menus {
+    padding: 3rem;
+  }
+}
+#homepage .menus h2 {
+  padding: 1rem 0 1rem 0;
 }
 #homepage .menus .menus__cards {
   display: grid;
@@ -206,22 +185,22 @@ header {
   top: 1rem;
 }
 #homepage .menus .card__image {
-  height: 15rem;
+  height: 13rem;
   border-radius: 1rem 1rem 0 0;
   background-size: cover;
   background-position: center;
 }
 #homepage .menus .card__image-1 {
-  background-image: url("../assets/menu-1.jpg");
+  background-image: url("../assets/images/menu-1.jpg");
 }
 #homepage .menus .card__image-2 {
-  background-image: url("../assets/menu-2.jpg");
+  background-image: url("../assets/images/menu-2.jpg");
 }
 #homepage .menus .card__image-3 {
-  background-image: url("../assets/menu-3.jpg");
+  background-image: url("../assets/images/menu-3.jpg");
 }
 #homepage .menus .card__image-4 {
-  background-image: url("../assets/menu-4.jpg");
+  background-image: url("../assets/images/menu-4.jpg");
 }
 #homepage .menus .card__description {
   position: relative;
@@ -278,6 +257,10 @@ header {
   padding: 0.3rem;
 }
 
+#homepage .menus .card__description {
+  padding: 1rem;
+}
+
 footer {
   background-color: #353535;
   padding: 1rem 2rem;
@@ -315,6 +298,33 @@ footer p {
     opacity: 1;
   }
 }
+footer {
+  background-color: #353535;
+  padding: 1rem 2rem;
+  color: white;
+}
+footer h2 {
+  font-family: "Shrikhand", "sans-serif";
+  font-weight: 500;
+  padding: 1rem 0;
+}
+footer p {
+  padding: 0.2rem;
+}
+@media (min-width: 1025px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 1rem 0.5rem 0;
+    height: 10vh;
+  }
+  footer p {
+    padding: 1rem;
+  }
+}
+
 body {
   background-color: #f6f6f6;
 }
@@ -352,7 +362,7 @@ body {
 }
 @media (min-width: 1024px) {
   #page-resto .banner img {
-    height: 30vh;
+    height: 35vh;
   }
 }
 #page-resto .resto__title {
@@ -430,10 +440,20 @@ body {
   display: flex;
   gap: 1rem;
   flex-direction: column;
+  padding: 2rem 1rem;
+}
+@media (min-width: 1024px) {
+  #page-resto .menus {
+    padding: 3rem 5rem;
+  }
 }
 #page-resto .menus h3 {
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
   text-transform: uppercase;
-  font-weight: 400;
   position: relative;
   margin-bottom: 1rem;
 }
@@ -484,6 +504,7 @@ body {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  padding-bottom: 0.2rem;
 }
 #page-resto .menus .menus__category .menu-item .menu-item__check {
   display: grid;
@@ -522,9 +543,9 @@ body {
   }
 }
 #page-resto .order {
-  height: 15vh;
   display: grid;
   place-items: center;
+  padding-bottom: 3rem;
 }
 #page-resto .order button {
   color: white;
@@ -553,6 +574,36 @@ body {
     left: calc(30% + 5rem);
     transform: translateX(-30%);
   }
+}
+.menu__category__list {
+  padding: 0.1rem 0;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /*# sourceMappingURL=style.css.map */
