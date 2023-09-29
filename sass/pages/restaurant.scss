@@ -1,11 +1,11 @@
-@use "../utils/mixins";
-@use "../utils/variables";
-@use "../utils/colors";
-@use "../utils/animations";
-@use "../layout/footer.scss";
+@import "../utils/mixins";
+@import "../utils/variables";
+@import "../utils/colors";
+@import "../utils/animations";
+@import "../layout/footer.scss";
 
 body {
-  background-color: colors.$lightergrey;
+  background-color: $lightergrey;
   @media (min-width: 1024px) {
     background-color: white;
   }
@@ -14,10 +14,10 @@ body {
 #page-resto {
   header {
     &:hover::before {
-      @include mixins.transform-zoom($zoom-level: 1.2, $transformation: translateY(-50%));
+      @include transform-zoom($zoom-level: 1.2, $transformation: translateY(-50%));
     }
     &::before {
-      @include mixins.font-awesome($font-weight: 900);
+      @include font-awesome($font-weight: 900);
       content: "\f060";
       left: 1rem;
       top: 50%;
@@ -43,9 +43,9 @@ body {
     h2 {
       font-family: "Shrikhand", "cursive";
       padding: 2rem 1rem;
-      @include mixins.heart-animated;
+      @include heart-animated;
       border-radius: 2rem 2rem 0 0;
-      background-color: colors.$lightergrey;
+      background-color: $lightergrey;
     }
     @media (min-width : 1024px) {
       text-align: center;
@@ -57,19 +57,30 @@ body {
     @media (min-width: 1024px) {
       margin: 0 10rem;
 
-      background-color: colors.$lightergrey;
+      background-color: $lightergrey;
     }
   }
   .menus {
     display: flex;
     gap: 1rem;
     flex-direction: column;
+    padding: 2rem 1rem;
+    @media (min-width: 1024px) {
+      padding: 3rem 5rem;
+    }
+
+    
 
     h3 {
+      font-family: Roboto;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
       text-transform: uppercase;
-      font-weight: 400;
       position: relative;
       margin-bottom: 1rem;
+
       &::after {
         content: "";
         position: absolute;
@@ -77,8 +88,10 @@ body {
         left: 0;
         height: 0.25rem;
         width: 3rem;
-        background-color: colors.$color-tertiary;
+        background-color: $color-tertiary;
       }
+
+     
     }
     .menus__category {
       overflow: hidden;
@@ -95,7 +108,7 @@ body {
         border-radius: 1rem;
         overflow: hidden;
         margin: 0.5rem;
-        @include mixins.box-shadow;
+        @include box-shadow;
         animation: appear 1s;
         animation-fill-mode: both;
 
@@ -114,6 +127,7 @@ body {
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
+            padding-bottom: 0.2rem;
           }
         }
         .menu-item__check {
@@ -122,7 +136,7 @@ body {
           flex-shrink: 0;
           $button-width: 4rem;
           border-radius: 0 1rem 1rem 0;
-          background-color: colors.$color-tertiary;
+          background-color: $color-tertiary;
           margin-right: -1 * $button-width;
           width: $button-width;
           transition: margin-right 0.5s;
@@ -134,7 +148,7 @@ body {
             height: $size;
             width: $size;
             border-radius: 1rem;
-            color: colors.$color-tertiary;
+            color: $color-tertiary;
           }
         }
         &:hover {
@@ -143,7 +157,7 @@ body {
             margin-right: 0;
           }
           i {
-            @include animations.quarterspin;
+            @include quarterspin;
             animation: quarterspin 0.5s ease-in-out;
           }
         }
@@ -152,11 +166,13 @@ body {
   }
 
   .order {
-    height: 15vh;
+
     display: grid;
     place-items: center;
+    padding-bottom: 3rem;
+
     button {
-      @include mixins.base-button;
+      @include base-button;
     }
   }
 }
@@ -170,4 +186,10 @@ body {
     left: calc(30% + 5rem);    
     transform: translateX(-30%);
   }
+}
+
+
+.menu__category__list{
+  padding: 0.1rem 0;
+
 }

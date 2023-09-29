@@ -4,8 +4,8 @@
   "description": "P4 openclassroom",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch style.scss style.css"
-    
+    "sass": "sass --watch ./sass/base.scss:./assets/style.css --style=expanded"
+
   },
   "repository": {
     "type": "git",
