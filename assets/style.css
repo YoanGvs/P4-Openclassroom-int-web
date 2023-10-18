@@ -14,7 +14,7 @@ header {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  background-color: #f3f3f3;
+  background-color: #EAEAEA;
   text-align: center;
   padding: 0.5rem;
 }
@@ -28,7 +28,7 @@ header {
 .explorer {
   text-align: center;
   padding: 2rem;
-  background: #f6f6f6;
+  background: #ffffff;
 }
 .explorer h2 {
   font-size: 1.5rem;
@@ -440,7 +440,7 @@ body {
   display: flex;
   gap: 1rem;
   flex-direction: column;
-  padding: 2rem 1rem;
+  padding: 1rem 0rem;
 }
 @media (min-width: 1024px) {
   #page-resto .menus {
