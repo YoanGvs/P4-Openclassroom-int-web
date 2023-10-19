@@ -5,6 +5,7 @@
 .tuto {
   counter-reset: steps;
   padding : 1rem;
+  background: white;
   @media (min-width: 1024px) {
     padding: 3rem;
   }
