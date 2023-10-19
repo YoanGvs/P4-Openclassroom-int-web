@@ -302,6 +302,7 @@ footer h2 {
 }
 footer p {
   padding: 0.2rem;
+  font-size: 0.7rem;
 }
 
 @media (min-width: 1023px) {
@@ -345,6 +346,7 @@ footer h2 {
 }
 footer p {
   padding: 0.2rem;
+  font-size: 0.7rem;
 }
 
 @media (min-width: 1023px) {
@@ -389,7 +391,7 @@ body {
 #page-resto .banner img {
   display: block;
   width: 100%;
-  height: 16vh;
+  height: 13rem;
   object-fit: cover;
   object-position: center;
 }
@@ -527,17 +529,25 @@ body {
   padding: 1rem;
   display: flex;
   align-items: flex-end;
+  font-size: 0.6rem;
 }
 #page-resto .menus .menus__category .menu-item .menu-item__description {
   padding: 1rem;
   overflow: hidden;
 }
-#page-resto .menus .menus__category .menu-item .menu-item__description h4,
+#page-resto .menus .menus__category .menu-item .menu-item__description h4 {
+  font-size: 0.8rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-bottom: 0.2rem;
+}
 #page-resto .menus .menus__category .menu-item .menu-item__description p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   padding-bottom: 0.2rem;
+  font-size: 0.6rem;
 }
 #page-resto .menus .menus__category .menu-item .menu-item__check {
   display: grid;
@@ -592,6 +602,7 @@ body {
   cursor: pointer;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  font-size: 1rem;
 }
 #page-resto .order button:hover {
   transform: scale(1.1);
