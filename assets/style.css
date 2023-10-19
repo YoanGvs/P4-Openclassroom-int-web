@@ -27,12 +27,21 @@ header {
 
 .explorer {
   text-align: center;
-  padding: 2rem;
+  padding: 1rem 2rem 3rem;
   background: #f6f6f6;
 }
 .explorer h2 {
   font-size: 1.5rem;
   margin: 1rem;
+}
+@media (min-width: 1023px) {
+  .explorer h2 {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 2rem;
+  }
 }
 .explorer p {
   font-family: Roboto;
@@ -49,7 +58,7 @@ header {
   border: none;
   border-radius: 2rem;
   transition: transform 300ms;
-  margin-top: 1rem;
+  margin-top: 10%;
   cursor: pointer;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
@@ -59,6 +68,11 @@ header {
   transform: scale(1.1);
   opacity: 0.9;
   box-shadow: 0px 7px 25px 4px rgba(0, 0, 0, 0.45);
+}
+@media (min-width: 1023px) {
+  .explorer button {
+    margin-top: 2rem;
+  }
 }
 
 .loader {
@@ -101,7 +115,7 @@ header {
 }
 @media (min-width: 1024px) {
   .tuto {
-    padding: 3rem;
+    padding: 2% 8%;
   }
 }
 .tuto ol {
@@ -117,6 +131,8 @@ header {
   position: relative;
   display: flex;
   align-items: center;
+  font-weight: 500;
+  line-height: normal;
   list-style-type: none;
   background-color: #f6f6f6;
   padding: 1.5rem 2rem;
@@ -154,11 +170,11 @@ header {
 
 #homepage .menus {
   background-color: #f6f6f6;
-  padding: 1rem 2rem 3rem;
+  padding: 1rem 1rem 3rem;
 }
 @media (min-width: 1024px) {
   #homepage .menus {
-    padding: 3rem;
+    padding: 2% 8% 2rem;
   }
 }
 #homepage .menus h2 {
@@ -271,25 +287,31 @@ footer {
   padding: 1rem 2rem;
   color: white;
 }
+@media (min-width: 1023px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-bottom: 0rem;
+  }
+}
 footer h2 {
   font-family: "Shrikhand", "sans-serif";
   font-weight: 500;
   padding: 1rem 0;
+  font-size: 16px;
 }
 footer p {
   padding: 0.2rem;
 }
-@media (min-width: 1025px) {
-  footer {
+
+@media (min-width: 1023px) {
+  .footer__menu {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-start;
-    align-items: flex-end;
-    padding: 1rem 0.5rem 0;
-    height: 10vh;
+    padding: 1.2rem;
+    font-size: 68%;
   }
-  footer p {
-    padding: 1rem;
+  .footer__menu p {
+    padding-right: 1rem;
   }
 }
 
@@ -308,25 +330,31 @@ footer {
   padding: 1rem 2rem;
   color: white;
 }
+@media (min-width: 1023px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-bottom: 0rem;
+  }
+}
 footer h2 {
   font-family: "Shrikhand", "sans-serif";
   font-weight: 500;
   padding: 1rem 0;
+  font-size: 16px;
 }
 footer p {
   padding: 0.2rem;
 }
-@media (min-width: 1025px) {
-  footer {
+
+@media (min-width: 1023px) {
+  .footer__menu {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-start;
-    align-items: flex-end;
-    padding: 1rem 0.5rem 0;
-    height: 10vh;
+    padding: 1.2rem;
+    font-size: 68%;
   }
-  footer p {
-    padding: 1rem;
+  .footer__menu p {
+    padding-right: 1rem;
   }
 }
 
@@ -560,7 +588,7 @@ body {
   border: none;
   border-radius: 2rem;
   transition: transform 300ms;
-  margin-top: 1rem;
+  margin-top: 10%;
   cursor: pointer;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));

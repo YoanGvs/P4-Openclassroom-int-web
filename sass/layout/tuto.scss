@@ -7,8 +7,9 @@
   padding : 1rem;
   background: white;
   @media (min-width: 1024px) {
-    padding: 3rem;
+    padding: 2% 8%;
   }
+
   & ol {
     display: flex;
     gap: 2rem;
@@ -20,6 +21,8 @@
     position: relative;
     display: flex;
     align-items: center;
+    font-weight: 500;
+    line-height: normal;
     &::before {
       content: counter(steps);
       counter-increment: steps;

@@ -3,11 +3,18 @@
 
 .explorer {
   text-align: center;
-  padding: 2rem;
+  padding: 1rem 2rem 3rem;
   background : #f6f6f6;
   & h2 {
     font-size: 1.5rem;
     margin: 1rem;
+    @media (min-width :1023px) {
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-bottom: 2rem;
+    }
   }
   & p {
     font-family: Roboto;
@@ -19,6 +26,10 @@
   & button {
     @include base-button;
     font-size: 1rem;
+
+    @media (min-width:1023px) {
+      margin-top: 2rem;
+    }
   }
 }
 
